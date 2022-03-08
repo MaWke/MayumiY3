@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Src%28Use file view%29">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Src%28Use file view%29\Struct">
+      <UniqueIdentifier>{b85d3ffe-1921-401f-8897-6b0f09fbe428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src%28Use file view%29\Process">
+      <UniqueIdentifier>{ee22c926-c14a-469d-be20-fed079d19085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src%28Use file view%29\utils">
+      <UniqueIdentifier>{f70ff92f-f010-4666-a041-e1f4acd00485}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MayumiY3.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Struct\XYZ.cpp">
+      <Filter>Src%28Use file view%29\Struct</Filter>
+    </ClCompile>
+    <ClCompile Include="Struct\CS.cpp">
+      <Filter>Src%28Use file view%29\Struct</Filter>
+    </ClCompile>
+    <ClCompile Include="process\Process.cpp">
+      <Filter>Src%28Use file view%29\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="features\bunnyhop.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\Graph.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\GUI.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\Simple_window.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\Window.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\Windows\MainWindow.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="features\glow.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="features\aimbot.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\math.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\input.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\utils.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="process\Process.h">
+      <Filter>Src%28Use file view%29\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct\XYZ.h">
+      <Filter>Src%28Use file view%29\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\utils.h">
+      <Filter>Src%28Use file view%29\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\math.h">
+      <Filter>Src%28Use file view%29\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct\CS.h">
+      <Filter>Src%28Use file view%29\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct\offsets.h">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClInclude>
+    <ClInclude Include="features\bunnyhop.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="GUI\Graph.h" />
+    <ClInclude Include="GUI\GUI.h" />
+    <ClInclude Include="GUI\Point.h" />
+    <ClInclude Include="GUI\Simple_window.h" />
+    <ClInclude Include="GUI\Window.h" />
+    <ClInclude Include="GUI\Windows\MainWindow.h" />
+    <ClInclude Include="features\glow.h" />
+    <ClInclude Include="features\aimbot.h" />
+    <ClInclude Include="resources\resource.h" />
+    <ClInclude Include="utils\input.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\MayumiY3.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\dango.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.md" />
+  </ItemGroup>
+</Project>
