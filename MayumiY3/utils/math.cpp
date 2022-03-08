@@ -1,11 +1,6 @@
 #include "math.h"
 #include "../Struct/CS.h"
 
-#include <DirectXMath.h>
-
-#define RAD2DEG(x) DirectX::XMConvertToDegrees(x)
-#define DEG2RAD(x) DirectX::XMConvertToRadians(x)
-
 float Math::ClampX(float x)
 {
     if (x > 89.0f) return 89.0f;
@@ -47,7 +42,7 @@ float Math::Vector::distanceVA(ViewAngle source, ViewAngle target)
         Math::getNormalized(source.x() - target.x()),
         Math::getNormalized(source.y() - target.y())
     );
-    return sqrtf(delta.x() * delta.x() + delta.y() * delta.y() + delta.z() * delta.z());  //@todo lengthVA function, or template for vec and va
+    return sqrtf(delta.x() * delta.x() + delta.y() * delta.y() + delta.z() * delta.z());
 }
 
 ViewAngle Math::Vector::getViewAngleBetween(Vec3 source, Vec3 destVec)
