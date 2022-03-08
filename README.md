@@ -16,7 +16,7 @@ This is the first program that I have made, though I have read a lot of other cs
 source codes and experimented with them. If you use these you will most likely not be banned for a while, 
 Because I doubt anyone will actually use these. The settings are currently so bad that I personally wouldn't. 
 Might update these if anybody cares for an update. If I keep updating I'll switch to Dear ImGUI. 
-But I think I'm more interested in other projects, which can include csgo cheats. 
+But I think I'm more interested in other projects, which might include csgo cheats. 
 If you're working on a project or have an idea and need help I would be happy to help to the best of my ability.
 If you have the time and knowledge I would appreciate if you went through some of the code and
 made comments about it, I'm interested in learning your thoughts on what I could've done better.
