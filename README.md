@@ -1,6 +1,6 @@
 												
 #	   MAYUMIY3
-*  https://github.com/mayumiy3
+*  https://github.com/MayumiY3
 ###	   by MaWke
     Accepted keys for aimbot: m1, m2, m3, m4, alt, z, x, c
 
