@@ -2,10 +2,10 @@
 #	   MAYUMIY3
 *  https://github.com/MaWke/MayumiY3
 ###	   by MaWke
-    Accepted keys for aimbot: m1, m2, m3, m4, alt, z, x, c
+    Accepted keys for the aimbot: m1, m2, m3, m4, alt, z, x, c
 
 #### READ IT!
-This program is not perfect. It was made purely for the purpose of learning.
+This program is not perfect. It was made solely for the purpose of learning.
 You can use it in any way you'd like, I used a lot of time on this, but it's 
 most likely not very good, and there are some flaws and wrong inferences that I'm well aware of.
 I chose to use this GUI library because I've read the first three parts of 
