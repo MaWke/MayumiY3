@@ -80,13 +80,13 @@ void LocalPlayer::forceJump()
 void LocalPlayer::setViewAngles(ViewAngle angle)
 {
 	static uintptr_t clientState = Process::readMem<uintptr_t>(uintptr_t(offsets::signatures::ClientState()));
-	Process::writeMem<ViewAngle>(clientState + offsets::signatures::ClientState_ViewAngles(), angle); //@todo should be dwclienstate_vieangles
+	Process::writeMem<ViewAngle>(clientState + offsets::signatures::ClientState_ViewAngles(), angle); 
 }
 
 ViewAngle LocalPlayer::getViewAngles() const
 {
 	static uintptr_t clientState = Process::readMem<uintptr_t>(offsets::signatures::ClientState());
-	return Process::readMem<ViewAngle>(clientState + offsets::signatures::ClientState_ViewAngles());	//@todo should be dwclienstate_vieangles
+	return Process::readMem<ViewAngle>(clientState + offsets::signatures::ClientState_ViewAngles());	
 }
 
 int LocalPlayer::getfFlags() const
@@ -172,6 +172,6 @@ BoneInBoneMatrix BoneMatrix::getBoneInMatrix(int boneID, uintptr_t boneMatrix)
 int Server::getMaxPlayer()
 {
 	static uintptr_t ClientState = Process::readMem<uintptr_t>(offsets::signatures::ClientState());
-	return Process::readMem<int>(ClientState + offsets::signatures::ClientState_MaxPlayer());	//@todo it should be +dwClientState_MaxPlayer
+	return Process::readMem<int>(ClientState + offsets::signatures::ClientState_MaxPlayer());
 }
 

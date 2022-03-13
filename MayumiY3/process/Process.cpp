@@ -12,10 +12,6 @@
 	*													*
 \*															*/
 
-//@todo could do the optimization here so everything that can be is calculated only once
-//currently just using "static inptr_t moduleAddr = getModuleAddr()" everywhere
-//						  ^^
-
 namespace process {
 	const std::wstring processName = L"csgo.exe";
 }
