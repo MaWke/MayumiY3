@@ -46,6 +46,8 @@ void glow::run()
 //
 try
 {
+	std::this_thread::sleep_for(std::chrono::milliseconds(5));
+
 	LocalPlayer* localPlayer = EntityList::getLocalPlayer();
 	while (!*localPlayer) if(!*Options::g_glow) return;		//Wait for localPlayer, check that option remains unchanged
 
