@@ -1,7 +1,9 @@
 #pragma once
 
-#include<Windows.h>
+#include <Windows.h>
+#include <TlHelp32.h>
 #include <stdexcept>
+#include <vector>
 
 namespace Process
 {
@@ -14,7 +16,9 @@ namespace Process
 	bool closeProcessHandle(DWORD procId);
 
 	DWORD getProcessID();
+	MODULEENTRY32 getModuleEntry(Modules mod);
 	uintptr_t getModuleAddr(Modules mod);
+	uintptr_t findPattern(Modules mod, const char* patternCombo, std::vector<int> offsets = {}, int extra = 0);
 
 	//
 	//ReadProcessMemory and WriteProcessMemory templates

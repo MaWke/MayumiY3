@@ -7,7 +7,6 @@
 /*															*\
 	*													*
 	*					MAYUMIY3						*
-	*  THESE CLASSES RELY HEAVILY ON THE RIGHT OFFSETS  *
 	*													*
 \*															*/
 

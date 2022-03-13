@@ -74,20 +74,19 @@ int Player::getGlowIndex() const
 //
 void LocalPlayer::forceJump()
 {
-	static uintptr_t forceJumpAddress = (Process::getModuleAddr(Process::Modules::CLIENTDLL) + offsets::signatures::dwForceJump);
-	Process::writeMem<int>(forceJumpAddress, 6);	//6 == forcejump
+	Process::writeMem<int>(offsets::signatures::ForceJump(), 6);	//6 == forcejump
 }
 
 void LocalPlayer::setViewAngles(ViewAngle angle)
 {
-	static uintptr_t dwClientState = Process::readMem<uintptr_t>(uintptr_t(Process::getModuleAddr(Process::Modules::ENGINEDLL) + offsets::signatures::dwClientState));
-	Process::writeMem<ViewAngle>(uintptr_t(dwClientState + offsets::signatures::dwClientState_ViewAngles), angle);
+	static uintptr_t clientState = Process::readMem<uintptr_t>(uintptr_t(offsets::signatures::ClientState()));
+	Process::writeMem<ViewAngle>(clientState + offsets::signatures::ClientState_ViewAngles(), angle); //@todo should be dwclienstate_vieangles
 }
 
 ViewAngle LocalPlayer::getViewAngles() const
 {
-	static uintptr_t dwClientState = Process::readMem<uintptr_t>(uintptr_t(Process::getModuleAddr(Process::Modules::ENGINEDLL) + offsets::signatures::dwClientState));
-	return Process::readMem<ViewAngle>(uintptr_t(dwClientState + offsets::signatures::dwClientState_ViewAngles));
+	static uintptr_t clientState = Process::readMem<uintptr_t>(offsets::signatures::ClientState());
+	return Process::readMem<ViewAngle>(clientState + offsets::signatures::ClientState_ViewAngles());	//@todo should be dwclienstate_vieangles
 }
 
 int LocalPlayer::getfFlags() const
@@ -101,9 +100,7 @@ int LocalPlayer::getfFlags() const
 //
 Player* EntityList::get(int index)
 {
-	static uintptr_t moduleBase = Process::getModuleAddr(Process::Modules::CLIENTDLL);
-	static uintptr_t entityList = moduleBase + offsets::signatures::dwEntityList;
-	return (Player*)(entityList + index * (int)typeSizes::ENTITY);
+	return (Player*)(offsets::signatures::EntityList() + index * (int)typeSizes::ENTITY);
 }
 
 ViewAngle EntityList::calcViewAnglesToBestTarget(float fov, ViewAngle lpViewAngles, Vec3 lpEyePos)
@@ -139,9 +136,7 @@ ViewAngle EntityList::calcViewAnglesToBestTarget(float fov, ViewAngle lpViewAngl
 
 LocalPlayer* EntityList::getLocalPlayer()
 {
-	static uintptr_t moduleBase = Process::getModuleAddr(Process::Modules::CLIENTDLL);
-	static LocalPlayer* lpp = (LocalPlayer*)(moduleBase + offsets::signatures::dwLocalPlayer);
-	return lpp;
+	return (LocalPlayer*)offsets::signatures::LocalPlayer();
 }
 //-----------------------------------------------------------------------
 
@@ -151,8 +146,7 @@ LocalPlayer* EntityList::getLocalPlayer()
 
 GlowStruct* GlowObjectManager::get(int index)
 {
-	static uintptr_t moduleBase = Process::getModuleAddr(Process::Modules::CLIENTDLL);
-	static uintptr_t glowObjectManager = Process::readMem<uintptr_t>(uintptr_t(moduleBase + offsets::signatures::dwGlowObjectManager));
+	uintptr_t glowObjectManager = Process::readMem<uintptr_t>(uintptr_t(offsets::signatures::GlowObjectManager()));
 	return (GlowStruct*)(glowObjectManager + (index * (int)typeSizes::GLOWSTRUCT));	
 }
 
@@ -177,8 +171,7 @@ BoneInBoneMatrix BoneMatrix::getBoneInMatrix(int boneID, uintptr_t boneMatrix)
 //
 int Server::getMaxPlayer()
 {
-	static uintptr_t moduleBase = Process::getModuleAddr(Process::Modules::ENGINEDLL);
-	static uintptr_t dwClientState = Process::readMem<uintptr_t>(moduleBase + offsets::signatures::dwClientState);
-	return Process::readMem<int>(dwClientState + offsets::signatures::dwClientState_MaxPlayer);
+	static uintptr_t ClientState = Process::readMem<uintptr_t>(offsets::signatures::ClientState());
+	return Process::readMem<int>(ClientState + offsets::signatures::ClientState_MaxPlayer());	//@todo it should be +dwClientState_MaxPlayer
 }
 

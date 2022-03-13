@@ -68,6 +68,9 @@
     <ClCompile Include="utils\utils.cpp">
       <Filter>Src%28Use file view%29</Filter>
     </ClCompile>
+    <ClCompile Include="Struct\offsets.cpp">
+      <Filter>Src%28Use file view%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="process\Process.h">
@@ -85,9 +88,6 @@
     <ClInclude Include="Struct\CS.h">
       <Filter>Src%28Use file view%29\Struct</Filter>
     </ClInclude>
-    <ClInclude Include="Struct\offsets.h">
-      <Filter>Src%28Use file view%29</Filter>
-    </ClInclude>
     <ClInclude Include="features\bunnyhop.h" />
     <ClInclude Include="Options.h" />
     <ClInclude Include="GUI\Graph.h" />
@@ -100,6 +100,7 @@
     <ClInclude Include="features\aimbot.h" />
     <ClInclude Include="resources\resource.h" />
     <ClInclude Include="utils\input.h" />
+    <ClInclude Include="Struct\offsets.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources\MayumiY3.rc">
@@ -110,8 +111,5 @@
     <Image Include="resources\dango.ico">
       <Filter>Resource Files</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="README.md" />
   </ItemGroup>
 </Project>

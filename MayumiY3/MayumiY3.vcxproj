@@ -109,6 +109,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Program Files\fltk-1.3.8;C:\Program Files\boost_1_77_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,6 +156,7 @@
     <ClCompile Include="GUI\Simple_window.cpp" />
     <ClCompile Include="GUI\Window.cpp" />
     <ClCompile Include="GUI\Windows\MainWindow.cpp" />
+    <ClCompile Include="Struct\offsets.cpp" />
     <ClCompile Include="utils\input.cpp" />
     <ClCompile Include="Options.cpp" />
     <ClCompile Include="MayumiY3.cpp" />
@@ -174,12 +176,12 @@
     <ClInclude Include="GUI\Simple_window.h" />
     <ClInclude Include="GUI\Window.h" />
     <ClInclude Include="GUI\Windows\MainWindow.h" />
+    <ClInclude Include="Struct\offsets.h" />
     <ClInclude Include="utils\input.h" />
     <ClInclude Include="Options.h" />
     <ClInclude Include="process\Process.h" />
     <ClInclude Include="resources\resource.h" />
     <ClInclude Include="Struct\CS.h" />
-    <ClInclude Include="Struct\offsets.h" />
     <ClInclude Include="utils\math.h" />
     <ClInclude Include="utils\utils.h" />
     <ClInclude Include="Struct\XYZ.h" />
@@ -189,9 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\dango.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
