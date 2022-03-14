@@ -201,7 +201,7 @@ uintptr_t Process::findPattern(Modules mod, const char* patternCombo, std::vecto
 		}
 	}
 	
-	throw std::runtime_error("Can't find " + pattern[5]);
+	throw std::runtime_error("Can't find " + *pattern);
 }
 //-----------------------------------------------------------------------
 
